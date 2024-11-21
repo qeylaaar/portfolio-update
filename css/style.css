@@ -1,0 +1,314 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff; /* atau warna latar belakang yang Anda inginkan */
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+	height: 85px;
+}
+header h1 {
+	display: inline-block;
+	float: left;
+	padding: 10px 24px;
+	text-transform: uppercase;
+}
+header h1 a{
+	transition: .3s;
+}
+header h1 a:hover{
+	color: #4AF00B;
+}
+header ul {
+	float: right;
+}
+header ul li {
+	padding: 20px 15px;
+	display: inline-block;
+}
+header ul li a{
+	transition: .3s;
+}
+header ul li a:hover{
+	color: #4AF00B;
+}
+a {
+	text-decoration: none;
+}
+header .container {
+    padding: 10px 0;
+}
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+.container::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.mobile-menu {
+	float: right;
+	display: none;
+	padding: 18px;
+}
+.mobile-menu:hover {
+	cursor: pointer;
+}
+#check {
+	display: none;
+}
+.sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: -300px;
+	width: 300px; 
+	background-color: rgba(9, 24, 109, .9);
+	transition: .3s;
+	z-index: 999;
+}
+.sidebar ul li a{
+	color: #fff;
+}
+.sidebar ul li{
+	padding: 24px;
+	transition: .3s;
+	transition-property: background-color;
+}
+.sidebar ul li:hover {
+	background-color: #103cda;
+}
+#check:checked ~ .sidebar {
+	left: 0;
+}
+.banner {
+	margin-top: 70px;
+    background-color: #103cda;
+    padding: 150px 0;
+    text-align: center; /* Menengahkan konten */
+}
+section {
+	padding: 50px 0;
+}
+.banner img {
+    width: 300px; /* Memperbesar ukuran gambar */
+    border-radius: 15px; /* Menyesuaikan border-radius */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Memperkuat bayangan */
+    margin-bottom: 30px; /* Menambah jarak dengan teks di bawahnya */
+}
+.banner h2 {
+    font-size: 2.5em; /* Memperbesar ukuran font */
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 1.2em; /* Memperbesar ukuran font */
+    max-width: 800px; /* Membatasi lebar maksimum teks */
+    margin: 0 auto; /* Menengahkan teks */
+}
+
+.banner-left {
+    padding-left: 0; /* Menghapus padding kiri */
+}
+.banner h2, p, span {
+	color: #fff;
+}
+.banner h2 {
+	margin-bottom: 10px;
+}
+.banner p {
+	font-size: 18px;
+}
+.banner-left {
+	padding-left: 24px;
+}
+.banner .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+section h3 {
+	padding-bottom: 20px;
+	text-align: center;
+	margin: 20px;
+	position: relative;
+}
+section h3::before {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	width: 120px;
+	height: 1px;
+	background-color: #ddd;
+	left: calc(50% - 60px);
+}
+section h3::after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: -1px;
+	width: 40px;
+	height: 4px;
+	background-color: #103cda;
+	left: calc(50% - 20px);
+}
+#about p {
+	color: black;
+	text-align: justify;
+	text-indent: 30px;
+	line-height: 25px;
+	margin-bottom: 15px;
+}
+#skills {
+	background-color: #f9f9f9;
+	padding: 50px 0;
+
+}
+#skills .bar {
+	height: 30px;
+	background-color: #fff;
+	border: 1px solid;
+	margin: 5px 0 20px 0;
+}
+.col-4 {
+	width: 25%;
+	box-sizing: border-box;
+	padding: 5px;
+	float: left;
+	text-align: center;
+	padding: 5px;
+	margin-bottom: 15px;
+}
+.col-4 img {
+	width: 100%;
+}
+.col-4 span {
+	color: black;
+}
+.col-4 img:hover{
+	transform: scale(1.2);
+}
+/*
+.col-3 p {
+	color: black;
+	width: 33.33%;
+	box-sizing: border-box;
+	float: left;
+	text-align: justify;
+	padding: 50px 10px;
+}
+.col-3 h4 {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 15px;
+	text-align: center;
+} */
+footer {
+	background-color: black;
+	padding: 50px;
+	text-align: center;
+}
+footer small {
+	color: white;
+}
+html {
+	scroll-behavior: smooth;
+}
+
+@media (max-width: 768px){
+	.mobile-menu {
+		display: block;
+	}
+	header ul {
+		display: none;
+	}
+	.col-4 {
+		width: 50%;
+	}
+}
+.skill-card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+.skill-card .media {
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill-card .align-self-center {
+    margin-right: 0;
+    margin-bottom: 15px;
+}
+.skill-card .media-body {
+    text-align: center;
+}
+.skill-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(25% - 20px);
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+.skill-card i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+.skill-card span {
+	color: #333;
+}
+.skill-card h4 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.skill-card .card-text {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .skill-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .skill-card {
+        width: 100%;
+    }
+}
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
